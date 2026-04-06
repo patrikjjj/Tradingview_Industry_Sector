@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Build artifacts
+build/
+dist/
+*.spec.bak
+
+# Local tool state
+.agent-connect/
+.tmp/
+.vscode/
+
+# Local runtime data
+data/current_ticker.json
+data/ticker_cache.json
+data/sectors.json
+data/industries.json
+*.lock
+*.tmp
+
+# OS noise
+Thumbs.db
+.DS_Store

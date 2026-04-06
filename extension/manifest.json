@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "TradingView Ticker Bridge",
+  "version": "2.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAriRkNjs6+AkETjmpqr9kqc5dFhOrmdwl9oNk8DSogH0XclApMNMgmhC6ylb3ismH0zbqs17U/2a4VSMAX2S2P00SVKv79KaPqxmEcj0J4wFNpixLn8uXF0slaVB/JOHdeiLAA81ZcfpXmKvVy8iJaKO3d37C4NfeBm6BG7/icm0W8I24etwGlWXTDQsKx6ldWG/GHzrE2EtfDDjtrA9J2b9JeSOxhRzHjAl3wXDiECcRmjfTQdQl7O7iVddMiO7VUzaJeDE+T6RYIcuzodx4J620wN/71M5X3ADC3HGvBrd6mxIyndYpcy1jyymfDHYgfF1Nzq3/w2gIUeFhtFKnmwIDAQAB",
+  "description": "Detect the active TradingView ticker and send it to the local desktop bridge.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["nativeMessaging"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.tradingview.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
